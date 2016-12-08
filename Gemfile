@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.5"
+ruby "2.1.8"
 
 gem 'rails', '3.2.21'
 gem 'rails-i18n', '~> 3.0.0'
@@ -65,6 +65,7 @@ gem 'foreigner'
 gem 'immigrant'
 
 gem 'whenever', require: false
+gem 'minitest', '4.3.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
