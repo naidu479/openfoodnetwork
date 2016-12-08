@@ -46,7 +46,7 @@ Spree.user_class.class_eval do
   end
 
   def send_signup_confirmation
-    Delayed::Job.enqueue ConfirmSignupJob.new(id)
+    # Delayed::Job.enqueue ConfirmSignupJob.new(id)
   end
 
   def can_own_more_enterprises?
