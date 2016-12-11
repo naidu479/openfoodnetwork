@@ -2,17 +2,17 @@
 #
 # Change this, it has serious security implications.
 # Minimum 30 but usually 128 characters. To obtain run 'rake secret', or faster, 'openssl rand -hex 128'
-SECRET_TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SECRET_TOKEN: ddf518327fd0e3f682a510be9c1dc6a81cef85ee7c07ce82275acb42ba3aa761daf346ecd1dc4f29e121e2261cec5ecf1634ff41f787f69142ce8533e53a7d5e
 
-TIMEZONE: Melbourne
+TIMEZONE: Eastern Time (US & Canada)
 # Default country for dropdowns etc. See for codes: http://en.wikipedia.org/wiki/ISO_3166-1
-DEFAULT_COUNTRY_CODE: AU
+DEFAULT_COUNTRY_CODE: US
 # Locale for translation.
 LOCALE: en
 # Spree zone.
-CHECKOUT_ZONE: Australia
+CHECKOUT_ZONE: North America
 # Find currency codes at http://en.wikipedia.org/wiki/ISO_4217.
-CURRENCY: AUD
+CURRENCY: USD
 
 # SingleSignOn login for Discourse
 #
