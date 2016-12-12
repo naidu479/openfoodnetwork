@@ -5,6 +5,10 @@ class UserRegistrationsController < Spree::UserRegistrationsController
   def create
     @user = build_resource(params[:spree_user])
     if resource.save
+      @orders = Spree::Order.where(user_id: nil , email: resource.email)
+      if @orders.present? 
+        @orders.update_all(user_id: resource.id)
+      end
       set_flash_message(:success, :signed_up)
       sign_in(:spree_user, @user)
       session[:spree_user_signup] = true
