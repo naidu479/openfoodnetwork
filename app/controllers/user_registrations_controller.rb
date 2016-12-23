@@ -3,14 +3,22 @@ class UserRegistrationsController < Spree::UserRegistrationsController
 
   # POST /resource/sign_up
   def create
+   p "*"*100
     @user = build_resource(params[:spree_user])
-    if resource.save
-      @orders = Spree::Order.where(user_id: nil , email: resource.email)
-      if @orders.present? 
-        @orders.update_all(user_id: resource.id)
-      end
-      set_flash_message(:success, :signed_up)
+   if resource.save
+     set_flash_message(:success, :signed_up)
+      begin 
+      p "sent email"
+      Spree::UserMailer.signup_confirmation(@user).deliver_now
+      rescue
+         p "not sending email"
+      end 
       sign_in(:spree_user, @user)
+       p @user
+      if Spree::Order.where(email: @user.email).exists?
+        @u_orders = Spree::Order.where(email: @user.email)
+        @u_orders.update_all(user_id: @user.id) if @u_orders.count > 0
+      end
       session[:spree_user_signup] = true
       associate_user
 

@@ -22,8 +22,8 @@
       .row
         .columns.large-12
           = link_to t(:back_to_store), main_app.shop_path, :class => "button"
-        -if guest_checkout_allowed?
-          %button.button.expand{"auth" => "login"}
+        - if guest_checkout_allowed?
+          %button.button{"auth" => "login"}
             = t :label_login
           - unless params.has_key? :checkout_complete
             - if try_spree_current_user && respond_to?(:spree_account_path)

@@ -2,13 +2,13 @@ angular.module("admin.products").factory "VariantUnitManager", ->
   class VariantUnitManager
     @unitNames:
       'weight':
-        1.0: 'g'
-        1000.0: 'kg'
-        1000000.0: 'T'
+        1.0: 'oz'
+        16.0: 'lb'
+        32000.0: 't'
       'volume':
-        0.001: 'mL'
-        1.0: 'L'
-        1000.0: 'kL'
+        1.0: 'fl oz'
+        16.0: 'pt'
+        128.0: 'gal'
 
     @variantUnitOptions: ->
       options = for unit_type, scale_with_name of @unitNames

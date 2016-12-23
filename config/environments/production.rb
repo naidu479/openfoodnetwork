@@ -31,7 +31,7 @@ Openfoodnetwork::Application.configure do
   config.force_ssl = false
 
   # See everything in the log (default is :info)
-  config.log_level = :warn
+  config.log_level = :debug
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
@@ -63,4 +63,14 @@ Openfoodnetwork::Application.configure do
 
   # force ssl site-wide
   # config.middleware.insert_before ActionDispatch::Static, "Rack::SSL"
+  config.action_mailer.default_url_options = { host: '52.21.225.233', :port => 3000}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   :user_name => "virtuallogger",
+   :password => 'vl10mimix',
+   :address => 'smtp.sendgrid.net',
+   :port => 587,
+   :authentication => :plain,
+   :enable_starttls_auto => true
+ }
 end

@@ -25,8 +25,8 @@ Spree::Variant.class_eval do
     if: -> v { v.product.andand.variant_unit.present? && v.unit_value.nil? }
 
   before_validation :update_weight_from_unit_value, if: -> v { v.product.present? }
-  after_save :update_units
-  after_save :refresh_products_cache
+  # after_save :update_units
+  # after_save :refresh_products_cache
   around_destroy :destruction
 
 
