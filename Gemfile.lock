@@ -108,15 +108,15 @@ GIT
       railties (>= 3.0)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     CFPropertyList (2.3.2)
-    actionmailer (3.2.21)
-      actionpack (= 3.2.21)
+    actionmailer (3.2.22)
+      actionpack (= 3.2.22)
       mail (~> 2.5.4)
-    actionpack (3.2.21)
-      activemodel (= 3.2.21)
-      activesupport (= 3.2.21)
+    actionpack (3.2.22)
+      activemodel (= 3.2.22)
+      activesupport (= 3.2.22)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
@@ -131,18 +131,18 @@ GEM
       builder (>= 2.1.2, < 4.0.0)
       i18n (>= 0.6.9)
       nokogiri (~> 1.4)
-    activemodel (3.2.21)
-      activesupport (= 3.2.21)
+    activemodel (3.2.22)
+      activesupport (= 3.2.22)
       builder (~> 3.0.0)
-    activerecord (3.2.21)
-      activemodel (= 3.2.21)
-      activesupport (= 3.2.21)
+    activerecord (3.2.22)
+      activemodel (= 3.2.22)
+      activesupport (= 3.2.22)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.21)
-      activemodel (= 3.2.21)
-      activesupport (= 3.2.21)
-    activesupport (3.2.21)
+    activeresource (3.2.22)
+      activemodel (= 3.2.22)
+      activesupport (= 3.2.22)
+    activesupport (3.2.22)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     acts-as-taggable-on (3.5.0)
@@ -169,7 +169,7 @@ GEM
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
-    blockenspiel (0.4.5)
+    blockenspiel (0.5.0)
     bugsnag (4.1.0)
     builder (3.0.4)
     byebug (2.7.0)
@@ -422,7 +422,7 @@ GEM
     jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.3)
+    json (1.8.6)
     json_spec (1.1.1)
       multi_json (~> 1.0)
       rspec (~> 2.0)
@@ -479,7 +479,7 @@ GEM
       xml-simple
     paypal-sdk-merchant (1.106.1)
       paypal-sdk-core (~> 0.2.3)
-    pg (0.13.2)
+    pg (0.18.4)
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -499,7 +499,7 @@ GEM
       activesupport (>= 2.3.14)
       multi_json (~> 1.0)
     rack (1.4.7)
-    rack-cache (1.6.1)
+    rack-cache (1.7.0)
       rack (>= 0.4)
     rack-livereload (0.3.15)
       rack
@@ -507,26 +507,26 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (3.2.21)
-      actionmailer (= 3.2.21)
-      actionpack (= 3.2.21)
-      activerecord (= 3.2.21)
-      activeresource (= 3.2.21)
-      activesupport (= 3.2.21)
+    rails (3.2.22)
+      actionmailer (= 3.2.22)
+      actionpack (= 3.2.22)
+      activerecord (= 3.2.22)
+      activeresource (= 3.2.22)
+      activesupport (= 3.2.22)
       bundler (~> 1.0)
-      railties (= 3.2.21)
+      railties (= 3.2.22)
     rails-i18n (3.0.1)
       i18n (~> 0.5)
       rails (>= 3.0.0, < 4.0.0)
-    railties (3.2.21)
-      actionpack (= 3.2.21)
-      activesupport (= 3.2.21)
+    railties (3.2.22)
+      actionpack (= 3.2.22)
+      activesupport (= 3.2.22)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     raindrops (0.13.0)
-    rake (11.1.2)
+    rake (10.5.0)
     ransack (0.7.2)
       actionpack (~> 3.0)
       activerecord (~> 3.0)
@@ -593,7 +593,7 @@ GEM
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
-    thor (0.19.1)
+    thor (0.19.4)
     tilt (1.4.1)
     timecop (0.8.1)
     timers (1.1.0)
@@ -606,7 +606,7 @@ GEM
       sprockets (>= 2.0.0)
     turn (0.8.3)
       ansi
-    tzinfo (0.3.49)
+    tzinfo (0.3.53)
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -655,11 +655,11 @@ DEPENDENCIES
   atomic
   awesome_print
   aws-sdk
-  blockenspiel
+  blockenspiel (~> 0.5.0)
   bugsnag
   capybara
   coffee-rails (~> 3.2.1)
-  compass-rails
+  compass-rails (~> 2.0.1)
   css_splitter
   custom_error_message!
   daemons
@@ -700,14 +700,15 @@ DEPENDENCIES
   paper_trail (~> 3.0.8)
   paperclip
   parallel_tests
-  pg
+  pg (~> 0.18.2)
   poltergeist
   pry-byebug
   rabl
   rack-livereload
   rack-ssl
-  rails (= 3.2.21)
+  rails (= 3.2.22)
   rails-i18n (~> 3.0.0)
+  rake (< 11)
   redcarpet
   representative_view
   roadie-rails (~> 1.0.3)
@@ -736,11 +737,7 @@ DEPENDENCIES
   wkhtmltopdf-binary
 
 RUBY VERSION
-<<<<<<< HEAD
-   ruby 2.1.8p440
-=======
-   ruby 2.1.5p273
->>>>>>> master
+   ruby 2.3.0p0
 
 BUNDLED WITH
-   1.13.6
+   1.14.6

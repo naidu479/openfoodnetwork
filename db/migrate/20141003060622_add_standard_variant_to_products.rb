@@ -4,7 +4,9 @@ class AddStandardVariantToProducts < ActiveRecord::Migration
     Spree::Product.where("variant_unit IS NULL OR variant_unit = ''").update_all(variant_unit: "items", variant_unit_name: "each")
 
     # Find products without any standard variants
-    products_with_only_master = Spree::Product.includes(:variants).where('spree_variants.id IS NULL').select('DISTINCT spree_products.*')
+    products = Spree::Product.includes(:variants)
+    return if products.nil? || products.empty?
+    products_with_only_master = products.where('spree_variants.id IS NULL').select('DISTINCT spree_products.*')
 
     products_with_only_master.each do |product|
       # Add a unit_value to the master variant if it doesn't have one

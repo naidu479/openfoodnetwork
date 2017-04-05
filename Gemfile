@@ -1,14 +1,15 @@
-source 'https://rubygems.org'
-ruby "2.1.8"
+source 'http://rubygems.org'
+ruby "2.3.0"
 
-gem 'rails', '3.2.21'
+gem 'rails', '3.2.22'
+gem 'rake', '< 11'
 gem 'rails-i18n', '~> 3.0.0'
 gem 'i18n', '~> 0.6.11'
 
 # Patched version. See http://rubysec.com/advisories/CVE-2015-5312/.
 gem 'nokogiri', '>= 1.6.7.1'
 
-gem 'pg'
+gem 'pg', '~> 0.18.2'
 gem 'spree', github: 'openfoodfoundation/spree', branch: 'spree-upgrade-step1c'
 gem 'spree_i18n', github: 'spree/spree_i18n', branch: '1-3-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '1-3-stable'
@@ -53,7 +54,7 @@ gem 'custom_error_message', :github => 'jeremydurham/custom-err-msg'
 gem 'angularjs-file-upload-rails', '~> 1.1.0'
 gem 'roadie-rails', '~> 1.0.3'
 gem 'figaro'
-gem 'blockenspiel'
+gem 'blockenspiel', '~> 0.5.0'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'paper_trail', '~> 3.0.8'
 gem 'diffy'
@@ -70,7 +71,7 @@ gem 'minitest', '4.3.2'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'compass-rails'
+  gem 'compass-rails', '~> 2.0.1'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

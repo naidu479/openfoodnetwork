@@ -96,22 +96,6 @@ ActiveRecord::Schema.define(:version => 20160921060442) do
   add_index "customers", ["ship_address_id"], :name => "index_customers_on_ship_address_id"
   add_index "customers", ["user_id"], :name => "index_customers_on_user_id"
 
-  create_table "delayed_jobs", :force => true do |t|
-    t.integer  "priority",   :default => 0, :null => false
-    t.integer  "attempts",   :default => 0, :null => false
-    t.text     "handler",                   :null => false
-    t.text     "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string   "locked_by"
-    t.string   "queue"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-  end
-
-  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
-
   create_table "distributors_payment_methods", :id => false, :force => true do |t|
     t.integer "distributor_id"
     t.integer "payment_method_id"

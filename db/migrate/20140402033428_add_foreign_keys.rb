@@ -44,7 +44,7 @@ class AddForeignKeys < ActiveRecord::Migration
     orphaned_inventory_units = Spree::InventoryUnit.joins('LEFT OUTER JOIN spree_variants ON spree_variants.id=spree_inventory_units.variant_id').where('spree_variants.id IS NULL')
     say "Destroying #{orphaned_inventory_units.count} orphaned InventoryUnits (of total #{Spree::InventoryUnit.count})"
     orphaned_inventory_units.destroy_all
-    
+
     # Remove orphaned Spree::LineItems
     orphaned_line_items = Spree::LineItem.
       joins('LEFT OUTER JOIN spree_variants ON spree_variants.id=spree_line_items.variant_id').
@@ -57,8 +57,8 @@ class AddForeignKeys < ActiveRecord::Migration
     state = Spree::State.first
     country = state.andand.country
     unless country && state
-      country = Spree::Country.create! name: 'Australia', iso_name: 'AU'
-      state = country.states.create! name: 'Victoria'
+      country = Spree::Country.create! name: 'United States', iso_name: 'US', iso: 'US', iso3: 'USA'
+      state = country.states.create! name: 'New York'
     end
 
     address = Spree::Address.create!(firstname: 'Dummy distributor', lastname: 'Dummy distributor', phone: '12345678', state: state,
