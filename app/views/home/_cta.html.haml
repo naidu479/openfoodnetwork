@@ -3,6 +3,8 @@
     .small-12.columns.text-center
       %h2
         = t :cta_headline
-      %br
-      %a.button.transparent{href: "/shops"}
+        %br/
+        = t :cta_subheadline
+      %br/
+      %a.button.transparent{:href => "/register/auth#/signup?after_login=%2Fregister"}
         = t :cta_label

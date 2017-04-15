@@ -25,22 +25,25 @@
 
   h1 {
     margin-top: 2rem;
+    font-weight: 300;
+    font-size: 45px;
+    color: $white;
 
     @media all and (min-width: 768px) {
-      margin-top: 10rem;
+      margin-top: 15rem;
     }
 
-    img {
-      max-width: 45%;
+    .button {
 
       @media all and (min-height: 500px) {
         max-width: 80%;
       }
 
-      margin-bottom: 2rem;
+      margin-top: 2rem;
 
       @media all and (min-width: 768px) {
-        margin-bottom: 5rem;
+        margin-top: 8rem;
+        margin-bottom: 6rem;
       }
     }
   }

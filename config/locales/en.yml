@@ -676,7 +676,7 @@ en:
   footer_legal_visit: "Find us on"
   footer_legal_text_html: "Open Food Network is a free and open source software platform. Our content is licensed with %{content_license} and our code with %{code_license}."
 
-  home_shop: Shop Now
+  home_shop: Start shopping here
 
   brandstory_headline: "Food, unincorporated."
   brandstory_intro: "Sometimes the best way to fix the system is to start a new one…"
@@ -701,7 +701,8 @@ en:
   system_step3: "3. Pick-up / Delivery"
   system_step3_text: "Hang on for your delivery, or visit your producer or hub for a more personal connection with your food. Food shopping as diverse as nature intended it."
 
-  cta_headline: "Shopping that makes the world a better place."
+  cta_headline: "Want to sell?"
+  cta_subheadline: "Farmers? Farmer's Market?"
   cta_label: "I'm Ready"
 
   stats_headline: "We're creating a new food system."
