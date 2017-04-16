@@ -38,7 +38,7 @@ en:
     welcome:
       subject: "%{enterprise} is now on %{sitename}"
   home: "OFN"
-  title: Open Food Network
+  title: Farm Fresh Web
   welcome_to: 'Welcome to '
   site_meta_description: "We begin from the ground up. With farmers and growers ready to tell their stories proudly and truly. With distributors ready to connect people with products fairly and honestly. With buyers who believe that better weekly shopping decisions can…"
   search_by_name: Search by name or suburb...
@@ -702,8 +702,8 @@ en:
   system_step3_text: "Hang on for your delivery, or visit your producer or hub for a more personal connection with your food. Food shopping as diverse as nature intended it."
 
   cta_headline: "Want to sell?"
-  cta_subheadline: "Farmers? Farmer's Market?"
-  cta_label: "I'm Ready"
+  cta_subheadline: "Farmer? Farmer's Market?"
+  cta_label: "Click here"
 
   stats_headline: "We're creating a new food system."
   stats_producers: "food producers"
