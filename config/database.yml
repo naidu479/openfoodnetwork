@@ -4,8 +4,6 @@ development:
   database: open_food_network_dev
   pool: 5
   host: localhost
-  username: ofn
-  password: f00d
 
 test:
   adapter: postgresql
@@ -13,8 +11,6 @@ test:
   database: open_food_network_test<%= ENV['TEST_ENV_NUMBER'] %>
   pool: 5
   host: localhost
-  username: ofn
-  password: f00d
 
 #not used with heroku
 production:
@@ -22,8 +18,6 @@ production:
   encoding: unicode
   database: open_food_network_prod
   pool: 5
-  username: ofn
-  password: f00d
 
 staging:
   adapter: postgresql
