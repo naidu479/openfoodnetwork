@@ -13,6 +13,7 @@ require 'open_food_network/xero_invoices_report'
 require 'open_food_network/bulk_coop_report'
 require 'open_food_network/payments_report'
 require 'open_food_network/orders_and_fulfillments_report'
+require 'open_food_network/farmers_market_report'
 
 Spree::Admin::ReportsController.class_eval do
 
@@ -273,6 +274,10 @@ Spree::Admin::ReportsController.class_eval do
     render_report(@report.header, @report.table, params[:csv], "xero_invoices_#{timestamp}.csv")
   end
 
+  def farmers_market
+    @report = OpenFoodNetwork::FarmerMarketReport.new(spree_current_user)
+    render_report(@report.header, @report.table, params[:csv], "farmers_market_#{timestamp}.csv")
+  end
 
   def render_report(header, table, create_csv, csv_file_name)
     unless create_csv
@@ -327,7 +332,8 @@ Spree::Admin::ReportsController.class_eval do
       :order_cycle_management => {:name => "Order Cycle Management", :description => ''},
       :sales_tax => { :name => "Sales Tax", :description => "Sales Tax For Orders" },
       :xero_invoices => { :name => "Xero Invoices", :description => 'Invoices for import into Xero' },
-      :packing => { :name => "Packing Reports", :description => '' }
+      :packing => { :name => "Packing Reports", :description => '' },
+      :farmers_market => { name: "Farmers Market", description: "" }
     }
     # Return only reports the user is authorized to view.
     reports.select { |action| can? action, :report }

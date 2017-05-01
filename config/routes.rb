@@ -212,6 +212,7 @@ Spree::Core::Engine.routes.prepend do
   match '/admin/reports/products_and_inventory' => 'admin/reports#products_and_inventory', :as => "products_and_inventory_admin_reports",  :via  => [:get, :post]
   match '/admin/reports/customers' => 'admin/reports#customers', :as => "customers_admin_reports",  :via  => [:get, :post]
   match '/admin/reports/xero_invoices' => 'admin/reports#xero_invoices', :as => "xero_invoices_admin_reports",  :via  => [:get, :post]
+  match '/admin/reports/farmers_market' => 'admin/reports#farmers_market', :as => "farmers_market_admin_reports",  :via  => [:get, :post]
   match '/admin', :to => 'admin/overview#index', :as => :admin
   match '/admin/payment_methods/show_provider_preferences' => 'admin/payment_methods#show_provider_preferences', :via => :get
 
