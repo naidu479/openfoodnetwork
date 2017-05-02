@@ -35,5 +35,7 @@
 
 $ ->
   # Hacky fix for issue - http://foundation.zurb.com/forum/posts/2112-foundation-5100-syntax-error-in-js
-  Foundation.set_namespace ""
+  Foundation.set_namespace ''
   $(document).foundation()
+  new (google.maps.places.Autocomplete)(document.getElementById('address_search'), types: [ 'geocode' ])
+  return
