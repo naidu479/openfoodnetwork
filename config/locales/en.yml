@@ -41,7 +41,7 @@ en:
   title: Farm Fresh Web
   welcome_to: 'Welcome to '
   site_meta_description: "We begin from the ground up. With farmers and growers ready to tell their stories proudly and truly. With distributors ready to connect people with products fairly and honestly. With buyers who believe that better weekly shopping decisions can…"
-  search_by_name: Search by name or suburb...
+  search_by_name: Tell us where you live (City, State, or ZIP)
   producers: 'Australian Producers'
   producers_join: Australian producers are now welcome to join the Open Food Network. #FIXME
   charges_sales_tax: Charges GST?
@@ -843,6 +843,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   enterprises_choose: "Choose when you want your order:"
 
   hubs_buy: "Shop for:"
+  hubs_click_here_and_we_will_find_you: "Click here and we'll find you"
   hubs_shopping_here: "Shopping here"
   hubs_orders_closed: "Orders closed"
   hubs_profile_only: "Profile only"
@@ -855,7 +856,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   hubs_filter_delivery: "Delivery"
   hubs_filter_property: "Property"
   hubs_matches: "Did you mean?"
-  hubs_intro: Shop in your local area
+  hubs_intro: To get you to market, we need to know where you are
   hubs_distance: Closest to
   hubs_distance_filter: "Show me shops near %{location}"
 
