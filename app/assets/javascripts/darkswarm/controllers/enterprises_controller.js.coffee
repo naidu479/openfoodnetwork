@@ -80,3 +80,35 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
   $scope.hideClosedShops = ->
     $scope.filterExpression['active'] = true
     $location.search('show_closed', null)
+
+  $scope.searchWithUserLocation = ->
+    if navigator.geolocation
+      navigator.geolocation.getCurrentPosition ((position) ->
+        return $scope.getUserLocationAddress(position)
+      ), ->
+        alert 'Something went wrong'
+        return
+    else
+      alert 'Browser doesn\'t support Geolocation'
+
+  $scope.getUserLocationAddress = (position) ->
+    latlng = $scope.getLatLng(position)
+    geocoder = new google.maps.Geocoder
+    geocoder.geocode { 'location': latlng }, (results, status) ->
+      if status == 'OK'
+        if results[1]
+          $scope.pushAddressToTextBox(results[0].formatted_address)
+        else
+          alert 'Couldn\'t find your location'
+      else
+        alert 'Geocoder failed due to: ' + status
+      return
+
+  $scope.getLatLng = (position) ->
+    return pos =
+            lat: position.coords.latitude
+            lng: position.coords.longitude
+
+  $scope.pushAddressToTextBox = (query) ->
+    $('#address_search').val query
+    $('#address_search').trigger 'change'
