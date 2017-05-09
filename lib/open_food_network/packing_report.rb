@@ -8,7 +8,7 @@ module OpenFoodNetwork
 
     def header
       if is_by_customer?
-        ["Hub", "Code", "First Name", "Last Name", "Supplier", "Product", "Variant", "Quantity", "TempControlled?"]
+        ["Hub", "Code", "First Name", "Last Name", "Supplier", "Product", "Variant", "Quantity", "TempControlled?", "Order Date"]
       else
         ["Hub", "Supplier", "Code", "First Name", "Last Name", "Product", "Variant", "Quantity", "TempControlled?"]
       end
@@ -98,7 +98,8 @@ module OpenFoodNetwork
           proc { |line_items| line_items.first.product.name },
           proc { |line_items| line_items.first.full_name },
           proc { |line_items| line_items.sum { |li| li.quantity } },
-          proc { |line_items| is_temperature_controlled?(line_items.first) }
+          proc { |line_items| is_temperature_controlled?(line_items.first) },
+          proc { |line_items| line_items.first.order.created_at }
         ]
       else
         [
