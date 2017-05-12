@@ -52,7 +52,7 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
     es = Enterprises.hubs
     $scope.nameMatches = enterpriseMatchesNameQueryFilter(es, true)
     noNameMatches = enterpriseMatchesNameQueryFilter(es, false)
-    $scope.distanceMatches = distanceWithinKmFilter(noNameMatches, MAP_KMS)
+    $scope.distanceMatches = distanceWithinKmFilter(noNameMatches, $('body').attr('map-kms'))
 
 
   $scope.updateVisibleMatches = ->
@@ -111,4 +111,11 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
 
   $scope.pushAddressToTextBox = (query) ->
     $('#address_search').val query
-    $('#address_search').trigger 'change'
+    angular.element('#address_search').triggerHandler('click');
+
+  $scope.userMilesChange = (e) ->
+    map_kms = e.target.value * MILES_TO_KMS
+    $('body').attr('map-kms', map_kms);
+    $scope.filterEnterprises()
+    # angular.element('#address_search').triggerHandler('click');
+    return true

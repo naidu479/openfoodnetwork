@@ -34,7 +34,8 @@
       "ofn-disable-enter" => true,
       "id" => "change_miles",
       "style" => "width: 60px; display: inline",
-      "value" => ENV['SHOPES_NEAR_MILES']}
+      "value" => ENV['SHOPES_NEAR_MILES'],
+      "ng-click" => "userMilesChange($event)"}
       = "Miles from your location"
   .more-controls
     %a.button{href: "", ng: {click: "showClosedShops()", show: "filterExpression.active"}}

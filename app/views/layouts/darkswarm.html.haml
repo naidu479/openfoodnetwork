@@ -15,7 +15,7 @@
     = yield :scripts
     %script{src: "//maps.googleapis.com/maps/api/js?libraries=places,geometry#{ ENV['GOOGLE_MAPS_API_KEY'] ? '&key=' + ENV['GOOGLE_MAPS_API_KEY'] : ''} "}
     %script{:type => "text/javascript"}
-      var MAP_KMS = #{ENV['SHOPES_NEAR_MILES'].to_f * ENV['MILES_TO_KMS'].to_f}
+      var MILES_TO_KMS = #{ENV['MILES_TO_KMS'].to_f};
 
     = split_stylesheet_link_tag "darkswarm/all"
     = javascript_include_tag "darkswarm/all"
@@ -24,7 +24,7 @@
     = render "layouts/bugherd_script"
     = csrf_meta_tags
 
-  %body.off-canvas{"ng-app" => "Darkswarm"}
+  %body.off-canvas{"ng-app" => "Darkswarm", "map-kms" => "#{ENV['SHOPES_NEAR_MILES'].to_f * ENV['MILES_TO_KMS'].to_f}"}
     / [if lte IE 8]
       = render partial: "shared/ie_warning"
       = javascript_include_tag "iehack"
