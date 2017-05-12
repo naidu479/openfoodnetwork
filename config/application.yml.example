@@ -24,3 +24,8 @@ CURRENCY: USD
 
 # see: https://developers.google.com/maps/documentation/javascript/get-api-key
 # GOOGLE_MAPS_API_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# Show shops near in miles
+SHOPES_NEAR_MILES: 10
+MILES_TO_KMS: 1.609344
+KMS_TO_MILES: 0.621371

@@ -8,7 +8,7 @@
     %span.margin-top{"ng-bind" => "::hub.address.city"}
   .columns.small-2.medium-1.large-1
     %span.margin-top{"ng-bind" => "::hub.address.state_name | uppercase"}
-    %span.margin-top{"ng-if" => "hub.distance != null && hub.distance > 0"} ({{ hub.distance / 1000 | number:0 }} km)
+    %span.margin-top{"ng-if" => "hub.distance != null && hub.distance > 0"} ({{ (hub.distance / 1000) * #{ENV['KMS_TO_MILES']} | number:2 }} miles)
 
   .columns.small-4.medium-3.large-3.text-right{"ng-if" => "::hub.active"}
     %a.hub.open_closed{"ng-href" => "{{::hub.path}}", "ng-class" => "{primary: hub.active, secondary: !hub.active}", "ofn-change-hub" => "hub"}

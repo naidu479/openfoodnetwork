@@ -16,6 +16,7 @@
     %script{src: "//maps.googleapis.com/maps/api/js?libraries=places,geometry#{ ENV['GOOGLE_MAPS_API_KEY'] ? '&key=' + ENV['GOOGLE_MAPS_API_KEY'] : ''} "}
     %script{:type => "text/javascript"}
       var MILES_TO_KMS = #{ENV['MILES_TO_KMS'].to_f};
+      var KMS_TO_MILES = #{ENV['KMS_TO_MILES'].to_f};
 
     = split_stylesheet_link_tag "darkswarm/all"
     = javascript_include_tag "darkswarm/all"
