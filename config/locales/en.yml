@@ -831,7 +831,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   shopping_oc_last_closed: "The last cycle closed %{distance_of_time} ago"
   shopping_oc_next_open: "The next cycle opens in %{distance_of_time}"
   shopping_tabs_about: "About %{distributor}"
-  shopping_tabs_contact: "Contact"
+  shopping_tabs_contact: "Location"
   shopping_contact_address: "Address"
   shopping_contact_web: "Contact"
   shopping_contact_social: "Follow"
