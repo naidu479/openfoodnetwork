@@ -43,3 +43,12 @@
     %a.button{href: "", ng: {click: "hideClosedShops()", show: "!filterExpression.active"}}
       = t '.hide_closed_shops'
     %a.button{href: main_app.map_path}= t '.show_on_map'
+
+  .row
+    .small-12.columns
+      .map-container{"style" => "height: 400px;"}
+        %map{"ng-controller" => "MapCtrl"}
+          %google-map{options: "map.additional_options", center: "map.center", zoom: "map.zoom", styles: "map.styles", draggable: "true"}
+            %map-osm-tiles
+            %markers{models: "distanceMatches.length > 0 ? distanceMatches : OfnMap.enterprises", fit: "true",
+            coords: "'self'", icon: "'icon'", click: "'reveal'"}
