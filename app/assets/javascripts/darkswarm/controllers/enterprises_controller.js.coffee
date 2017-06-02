@@ -53,6 +53,8 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
     $scope.nameMatches = enterpriseMatchesNameQueryFilter(es, true)
     noNameMatches = enterpriseMatchesNameQueryFilter(es, false)
     $scope.distanceMatches = distanceWithinKmFilter(noNameMatches, $('body').attr('map-kms'))
+    $scope.mapMatches = $scope.distanceMatchMarkers($scope.distanceMatches) if $scope.distanceMatches.length > 0
+    $scope.mapMatches = $scope.distanceMatchMarkers($scope.nameMatches) if $scope.nameMatches.length > 0
 
 
   $scope.updateVisibleMatches = ->
@@ -117,5 +119,19 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
     map_kms = e.target.value * MILES_TO_KMS
     $('body').attr('map-kms', map_kms);
     $scope.filterEnterprises()
-    # angular.element('#address_search').triggerHandler('click');
     return true
+
+  $scope.distanceMatchMarkers = (enterprises) ->
+    markers = []
+    for enterprise in enterprises
+      markers.push $scope.createMarkers(enterprise)
+    markers
+
+  $scope.createMarkers = (enterprise) ->
+    new class MapMarker
+      latitude: enterprise.latitude
+      longitude: enterprise.longitude
+      icon: enterprise.icon
+      id: enterprise.id
+      reveal: =>
+        $scope.openModal.open enterprise
