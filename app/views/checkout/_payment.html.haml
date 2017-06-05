@@ -37,3 +37,6 @@
         .small-12.medium-12.large-6.columns
           #distributor_address.panel{"ng-show" => "Checkout.paymentMethod().description"}
             %span.pre-wrap {{ Checkout.paymentMethod().description }}
+        .small-12.medium-12.columns
+          %p
+            You agree that if you fail to pick up your order by #{(DateTime.current + 3).strftime("%e %b %Y %H:%M")}, we’ll charge your credit card for the amount shown. Orders forfeited will be donated to local charities in your name

@@ -719,7 +719,7 @@ en:
   checkout_headline: "Ok, ready to checkout?"
   checkout_as_guest: "Checkout as guest"
   checkout_details: "Your details"
-  checkout_billing: "Billing info"
+  checkout_billing: "Reservation Security"
   checkout_default_bill_address: "Save as default billing address"
   checkout_shipping: Shipping info
   checkout_default_ship_address: "Save as default shipping address"
