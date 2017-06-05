@@ -42,3 +42,4 @@ libpeerconnection.log
 node_modules
 public/assets
 vendor/bundle
+config/database.yml
