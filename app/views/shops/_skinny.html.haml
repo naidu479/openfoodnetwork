@@ -1,22 +1,18 @@
 .row.active_table_row{"ng-if" => "hub.is_distributor", "ng-click" => "toggle($event)", "ng-class" => "{'closed' : !open(), 'is_distributor' : producer.is_distributor}"}
-  .columns.small-12.medium-5.large-5.skinny-head
+  .columns.small-6.medium-3.large-3.skinny-head
     %a.hub{"ng-href" => "{{::hub.path}}", "ng-class" => "{primary: hub.active, secondary: !hub.active}", "ofn-change-hub" => "hub", "data-is-link" => "true"}
       %i{ng: {class: "::hub.icon_font"}}
       %span.margin-top.hub-name-listing{"ng-bind" => "::hub.name | truncate:40"}
 
   .columns.small-4.medium-2.large-2
-    %span.margin-top{"ng-bind" => "::hub.address.city"}
-  .columns.small-2.medium-1.large-1
-    %span.margin-top{"ng-bind" => "::hub.address.state_name | uppercase"}
-    %span.margin-top{"ng-if" => "hub.distance != null && hub.distance > 0"} ({{ (hub.distance / 1000) * #{ENV['KMS_TO_MILES']} | number:2 }} miles)
+    %div.margin-top{"ng-bind" => "::hub.address.city", "ng-if" => "hub.distance == null"}
+    %div.margin-top{"ng-if" => "hub.distance != null && hub.distance > 0"} {{ (hub.distance / 1000) * #{ENV['KMS_TO_MILES']} | number:2 }} miles
 
-  .columns.small-4.medium-3.large-3.text-right{"ng-if" => "::hub.active"}
-    %a.hub.open_closed{"ng-href" => "{{::hub.path}}", "ng-class" => "{primary: hub.active, secondary: !hub.active}", "ofn-change-hub" => "hub"}
-      %i.ofn-i_033-open-sign
-      %span.margin-top{ ng: { if: "::current()" } }
-        %em= t :hubs_shopping_here
-      %span.margin-top{ ng: { if: "::!current()" } }
-        %span{"ng-bind" => "::hub.orders_close_at | sensible_timeframe"}
+  .columns.small-4.medium-2.large-2
+    %div.margin-top{"ng-bind" => "::hub.orders_close_at | date_in_words"}
+
+  .columns.small-6.medium-4.large-4
+    %div.margin-top{"ng-bind" => "::hub.description"}
 
   .columns.small-4.medium-3.large-3.text-right{"ng-if" => "::!hub.active"}
     %a.hub.open_closed{"ng-href" => "{{::hub.path}}", "ng-class" => "{primary: hub.active, secondary: !hub.active}", "ofn-change-hub" => "hub"}
