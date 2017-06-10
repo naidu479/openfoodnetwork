@@ -124,7 +124,7 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
   $scope.distanceMatchMarkers = (enterprises) ->
     markers = []
     for enterprise in enterprises
-      markers.push $scope.createMarkers(enterprise)
+      markers.push $scope.createMarkers(enterprise) if enterprise.active
     markers
 
   $scope.createMarkers = (enterprise) ->
@@ -134,4 +134,4 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
       icon: enterprise.icon
       id: enterprise.id
       reveal: =>
-        $scope.openModal.open enterprise
+        $scope.openModal enterprise
