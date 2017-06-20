@@ -63,4 +63,14 @@ Openfoodnetwork::Application.configure do
 
   # force ssl site-wide
   # config.middleware.insert_before ActionDispatch::Static, "Rack::SSL"
+  config.action_mailer.default_url_options = { host: ENV['DEFAILT_MAIL_HOST'] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   :user_name => ENV['SMTP_USERNAME'],
+   :password => ENV['SMPT_PASSWORD'],
+   :address => 'smtp.sendgrid.net',
+   :port => 587,
+   :authentication => :plain,
+   :enable_starttls_auto => true
+  }
 end
