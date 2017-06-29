@@ -24,7 +24,7 @@ class CheckoutController < Spree::CheckoutController
         if @order.state == "payment"
           return if redirect_to_paypal_express_form_if_needed
         end
-
+        @order.shipping_method = available_shipping_methods.first
         if advance_order_state(@order)
           state_callback(:after)
         else
