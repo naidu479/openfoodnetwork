@@ -594,7 +594,7 @@ en:
   city: City
   city_placeholder: eg. Northcote
   state: State
-  postcode: Postcode
+  postcode: Zipcode
   postcode_placeholder: eg. 3070
   state: State
   country: Country
