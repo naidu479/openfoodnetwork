@@ -771,7 +771,7 @@ en-GB:
   registration_type_no_producer: "No, I'm not a producer"
   registration_type_error: "Please choose one. Are you are producer?"
   registration_type_producer_help: "Producers make things to eat and/or drink. You're a producer if you might grow it, raise it, brew it, bake it or ferment it."
-  registration_type_no_producer_help: "If you’re not a producer, you’re probably someone who sells and distributes food. You might be a hub, coop, buying group, retailer, wholesaler or other."
+  registration_type_no_producer_help: "If you’re not a producer, you’re probably someone who sells and distributes food. You might be a farmers market."
   create_profile: "Create profile"
   registration_images_headline: "Thanks!"
   registration_images_description: "Let's upload some pictures so your profile looks great! :)"
