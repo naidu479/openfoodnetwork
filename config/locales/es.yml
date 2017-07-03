@@ -20,12 +20,12 @@ es:
       subject: "Confirma la dirección de correo electrónico de %{enterprise}"
     welcome:
       subject: "%{enterprise} está ahora en %{sitename}"
-  title: Open Food Network
+  title: Farm Fresh Web
   welcome_to: 'Bienvenido a '
   site_meta_description: "Nosotros empezamos desde abajo. Con granjeros y productoras listas para contar sus historias con orgullo y autenticidad. Con distribuidoras listas para conectar gente con productos de forma justa y honesta. Con compradores que creen que mejores decisiones de compras semanales pueden..."
   search_by_name: Buscar por nombre o barrio...
   producers: 'Productoras Australianos'
-  producers_join: Las productoras australianas ahora son bienvenidas a unirse a Open Food Network.
+  producers_join: Las productoras australianas ahora son bienvenidas a unirse a Farm Fresh Web.
   charges_sales_tax: ¿Cargos de GST?
   print_invoice: "Imprimir factura"
   print_ticket: "Imprimir Ticket"
@@ -112,7 +112,7 @@ es:
     business_model_configuration:
       edit:
         business_model_configuration: "Modelo de Sostenibilidad"
-        business_model_configuration_tip: "Configurar tarifa para las organizaciones que se cobrarán una vez al mes por usar Open Food Network."
+        business_model_configuration_tip: "Configurar tarifa para las organizaciones que se cobrarán una vez al mes por usar Farm Fresh Web."
         bill_calculation_settings: "Configuración de cálculos para las Facturas"
         bill_calculation_settings_tip: "Ajusta el número de organizaciones a las que se facturará cada mes por usar OFN."
         shop_trial_length: "Duración de la prueba de la Tienda (Días)"
@@ -315,7 +315,7 @@ es:
           permalink: Permalink (sin espacios)
           permalink_tip: "Se usa para crear la URL de tu tienda: %{link}nombre-de-tu-tienda/shop"
           link_to_front: Link a la tienda
-          link_to_front_tip: Enlace directo a tu tienda en Open Food Networks
+          link_to_front_tip: Enlace directo a tu tienda en Farm Fresh Webs
         shipping_methods:
           name: Nombre
           applies: ¿Aplicar?
@@ -386,20 +386,20 @@ es:
         producer_profile: Perfil Productora
         connect_ofn: Conectar a través de OFN
         always_free: SIEMPRE GRATIS
-        producer_description_text: Añade tus productos a Open Food Network, permitiendo a los Grupos de Consumo vender tus productos.
+        producer_description_text: Añade tus productos a Farm Fresh Web, permitiendo a los Grupos de Consumo vender tus productos.
         producer_shop: Tienda Productora
         sell_your_produce: Vende tu propia producción
-        sell_description_text: Vende tus productos directamente a los consumidores con tu tienda en Open Food Network.
+        sell_description_text: Vende tus productos directamente a los consumidores con tu tienda en Farm Fresh Web.
         sell_description_text2: Una tienda de productora es para tu producto solamente, si quieres vender productos de otros productores, selecciona 'Grupo de Consumo'.
         producer_hub: Hub de Productoras
         producer_hub_text: Vende tu propia producción y la de otros
-        producer_hub_description_text: Tu organización es la columna vertebral de un sistema de consumo local. Agrega productos tuyos o de otras organizaciones y véndelo a través de tu tienda en Open Food Network.
+        producer_hub_description_text: Tu organización es la columna vertebral de un sistema de consumo local. Agrega productos tuyos o de otras organizaciones y véndelo a través de tu tienda en Farm Fresh Web.
         profile: Solo perfil
         get_listing: Obtener un listado
-        profile_description_text: La gente podrá encontrarte y ponerse en contacto contigo en Open Food Network. Su empresa será visible en el mapa y se podrá buscar en los listados.
+        profile_description_text: La gente podrá encontrarte y ponerse en contacto contigo en Farm Fresh Web. Su empresa será visible en el mapa y se podrá buscar en los listados.
         hub_shop: Tienda
         hub_shop_text: Vender la producción de otros
-        hub_shop_description_text: Tu organización es la columna vertebral de un sistema de consumo local. Agrega productos de otras organizaciones y véndelo a través de tu tienda en Open Food Network.
+        hub_shop_description_text: Tu organización es la columna vertebral de un sistema de consumo local. Agrega productos de otras organizaciones y véndelo a través de tu tienda en Farm Fresh Web.
         choose_option: Por favor, elija una de las opciones anteriores.
         change_now: Cambiar
       enterprise_user_index:
@@ -419,7 +419,7 @@ es:
         title: Nueva Organización
         back_link: Volver a la lista de organizaciones
       welcome:
-        welcome_title: Bienvenida a Open Food Network!
+        welcome_title: Bienvenida a Farm Fresh Web!
         welcome_text: Has creado correctamente un
         next_step: Siguiente paso
         choose_starting_point: 'Elige tu punto de partida:'
@@ -483,7 +483,7 @@ es:
       show_on_map: "Mostrar todo en el mapa"
   shared:
     register_call:
-      selling_on_ofn: "¿Estás interesada en entrar en Open Food Network?"
+      selling_on_ofn: "¿Estás interesada en entrar en Farm Fresh Web?"
       register: "Regístrate aquí"
   shop:
     messages:
@@ -587,11 +587,11 @@ es:
   ofn_cart_quantitiy: "Cantidad:"
   ofn_cart_send: "Comprar me"
   ie_warning_headline: "Su navegador está desactualizado :-("
-  ie_warning_text: "Para la mejor esperiencia de Open Food Network, recomendamos actualizar su navegador:"
+  ie_warning_text: "Para la mejor esperiencia de Farm Fresh Web, recomendamos actualizar su navegador:"
   ie_warning_chrome: Descargar Chrome
   ie_warning_firefox: Descargar Firefox
   ie_warning_ie: Actualizar Internet Explorer
-  ie_warning_other: "¿No puede actualizar su navegador? Pruebe Open Food Network en su teléfono :-)"
+  ie_warning_other: "¿No puede actualizar su navegador? Pruebe Farm Fresh Web en su teléfono :-)"
   footer_global_headline: "OFN Global"
   footer_global_home: "Inicio"
   footer_global_news: "Noticas"
@@ -602,17 +602,17 @@ es:
   footer_sites_community: "Comunidad"
   footer_sites_userguide: "Guía de usuario"
   footer_secure: "Seguro y de confianza."
-  footer_secure_text: "Open Food Network usa cifrado SSL (RSA de 2048 bit) en todo lado para mantener privada la información de compras y pagos. Nuestros servidores no almacenan los detalles de tarjetas de créditos y los pagos son procesados por servicios que cumplen con PCI."
+  footer_secure_text: "Farm Fresh Web usa cifrado SSL (RSA de 2048 bit) en todo lado para mantener privada la información de compras y pagos. Nuestros servidores no almacenan los detalles de tarjetas de créditos y los pagos son procesados por servicios que cumplen con PCI."
   footer_contact_headline: "Mantenerse en contacto"
   footer_contact_email: "Envíenos un correo"
   footer_nav_headline: "Navegar"
   footer_join_headline: "Unirse"
-  footer_join_body: "Crea un listado, una tienda o un directorio en Open Food Network."
+  footer_join_body: "Crea un listado, una tienda o un directorio en Farm Fresh Web."
   footer_join_cta: "Cuentame más!"
   footer_legal_call: "Leer nuestros"
   footer_legal_tos: "Terminos y condiciones"
   footer_legal_visit: "Encuéntrenos en"
-  footer_legal_text_html: "Open Food Network es una plataforma libre y de código abierto. Nuestro contenido tiene una licencia %{content_license} y nuestro código %{code_license}."
+  footer_legal_text_html: "Farm Fresh Web es una plataforma libre y de código abierto. Nuestro contenido tiene una licencia %{content_license} y nuestro código %{code_license}."
   home_shop: Comprar ahora
   brandstory_headline: "Consume con valores."
   brandstory_intro: "A veces la mejor forma de arreglar el sistema es empezar uno nuevo…"
@@ -620,7 +620,7 @@ es:
   brandstory_part2: "Luego necesitamos una forma de hacerlo real. Una forma de empoderar a todos los que producen, venden y compran comida. Una forma de contar todas las historias, de manejar todas las logísticas. Una forma de convertir transacción en transformación todos los días."
   brandstory_part3: "Entonces contruímos un mercado que nivela el campo de juego. Es transparente, de forma que crea relaciones reales. Es de código abierto, de forma que todos son los dueños."
   brandstory_part4: "Funciona en todo lado. Cambia todo."
-  brandstory_part5_strong: "Le llamamos Open Food Network."
+  brandstory_part5_strong: "Le llamamos Farm Fresh Web."
   brandstory_part6: "Todos amamos la comida. Ahora podemos amar nuestro sistema de comida también."
   learn_body: "Explora modelos, historias y recursos para ayudarte a desarrollar tu organización. Encuentra formación, eventos y otras oportunidades para aprender de tus compañeros."
   learn_cta: "Inspírate"
@@ -784,7 +784,7 @@ es:
   products_update_error_data: "Error al guardar datos no válidos:"
   products_changes_saved: "Cambios guardados."
   search_no_results_html: "Lo sentimos, no hay resultados para %{query}. ¿Intentar otra búsqueda?"
-  components_profiles_popover: "Los perfiles no tienen escaparate en Open Food Network, pero pueden tener su propia tienda física o en línea en otro lugar"
+  components_profiles_popover: "Los perfiles no tienen escaparate en Farm Fresh Web, pero pueden tener su propia tienda física o en línea en otro lugar"
   components_profiles_show: "Mostrar perfiles"
   components_filters_nofilters: "Sin filtros"
   components_filters_clearfilters: "Limpiar todos los filtros"
@@ -811,7 +811,7 @@ es:
   groups_signup_motivation3: Sabemos que tiene grandes ideas, y queremos ayudar. Compartiremos nuestro conocimiento, redes y recursos. Sabemos que el aislamiento no crea cambio, entonces nos asociaremos con usted.
   groups_signup_motivation4: Nos reunimos con usted en donde esté.
   groups_signup_motivation5: Quizás eres un grupo de consumo, productora o distribuidora u otra organización.
-  groups_signup_motivation6: Cualquiera que sea su rol en el movimiento de comida local, estamos listos para ayudar. De cualquier forma en que se pregunte cómo se vería Open Food Network o qué está haciendo en su parte del mundo, empecemos la conversación.
+  groups_signup_motivation6: Cualquiera que sea su rol en el movimiento de comida local, estamos listos para ayudar. De cualquier forma en que se pregunte cómo se vería Farm Fresh Web o qué está haciendo en su parte del mundo, empecemos la conversación.
   groups_signup_motivation7: Hacemos que los movimientos alimenticios tengan más sentido.
   groups_signup_motivation8: Necesita activar y habilitar sus redes. Le ofrecemos una plataforma para conversación y acción. Necesita involucramiento real. Le ayudaremos a alcanzar todos los actores, todos los interesados, todos los sectores.
   groups_signup_motivation9: Necesita recursos. Le brindaremos todas nuestras experiencias para portar. Necesita cooperación. Lo conectaremos mejor a una red global de pares.
@@ -826,17 +826,17 @@ es:
   modal_hubs_content1: Puede buscar un grupo de consumo conveniente por ubicación o nombre. Algunos grupos de consumo tienen múltiples puntos en loa que puede recoger las compras, y algunos también brindan opciones de entrega a domicilio. Cada Grupo de Consumo es un punto de venta con operaciones de negocio y logística independientes, entonces puede esperar diferencias entre Grupos de Consumo.
   modal_hubs_content2: Sólo puedes comprar en un grupo de consumo a la vez.
   modal_groups: "Grupos / Regiones"
-  modal_groups_content1: Estas son las organizaciones y relaciones entre grupos de consumo que conforman el Open Food Network.
+  modal_groups_content1: Estas son las organizaciones y relaciones entre grupos de consumo que conforman el Farm Fresh Web.
   modal_groups_content2: Algunos grupos están organizados por ubicación o junta, otros por similaridades no geográficas.
   modal_how: "Cómo funciona"
-  modal_how_shop: Comprar en Open Food Network
+  modal_how_shop: Comprar en Farm Fresh Web
   modal_how_shop_explained: ¡Buscar un grupo de consumo cerca de ti para empezar a comprar! Puedes expandir cada grupo de consumo para ver qué tipos de productos están disponibles, y hacer clic para empezar a comprar. (Sólo puedes comprar en un grupo de consumo a la vez.)
   modal_how_pickup: Recogida, entrega y gastos de envío
   modal_how_pickup_explained: Algunos grupos de consumo hacen entregas hasta su puerta, mientras otros requieren que recojas las compras. Puedes ver que opciones están disponibles en su página de inicio, y seleccionar cuál te gustaría en las páginas de compras y revisión. Las entregas costarán más, y el precio cambia entre grupos de consumo. Cada grupo es un punto de venta con operaciones y logística independientes, las diferencias son normales y deseables.
   modal_how_more: Aprender más
-  modal_how_more_explained: "Si quiere aprender más acerca del Open Food Network, cómo trabaja y colaborar, revise:"
+  modal_how_more_explained: "Si quiere aprender más acerca del Farm Fresh Web, cómo trabaja y colaborar, revise:"
   modal_producers: "Productoras"
-  modal_producers_explained: "Nuestras productoras hacen todos los deliciosos alimentos que puedes comprar en Open Food Network."
+  modal_producers_explained: "Nuestras productoras hacen todos los deliciosos alimentos que puedes comprar en Farm Fresh Web."
   producers_about: Acerca de nosotras
   producers_buy: Comprar
   producers_contact: Contacto
@@ -866,7 +866,7 @@ es:
   products_price: "Precio"
   register_title: Registro
   sell_title: "Registro"
-  sell_headline: "¡Consíguelo en Open Food Network!"
+  sell_headline: "¡Consíguelo en Farm Fresh Web!"
   sell_motivation: "Muestra tus preciosos alimentos."
   sell_producers: "Productoras"
   sell_hubs: "Grupos de Consumo"
@@ -966,7 +966,7 @@ es:
   choose_password: "Escoje una contraseña"
   confirm_password: "Confirmar contraseña"
   action_signup: "Registrarse ahora"
-  welcome_to_ofn: "¡Bienvenido a Open Food Network!"
+  welcome_to_ofn: "¡Bienvenido a Farm Fresh Web!"
   signup_or_login: "Empieza registrándose (o iniciando sesión)"
   have_an_account: "¿Ya tiene una cuenta?"
   action_login: "Inicie sesión ahora."
@@ -1002,7 +1002,7 @@ es:
   logo_placeholder: "El logo aparecerá aquí para ser revisado cuando se haya subido"
   enterprise_about_headline: "¡Buena esa!"
   enterprise_about_message: "Ahora vamos a profundizar en los detalles acerca de"
-  enterprise_success: "¡Éxito! %{enterprise} se agregó a la Open Food Network "
+  enterprise_success: "¡Éxito! %{enterprise} se agregó a la Farm Fresh Web "
   enterprise_registration_exit_message: "Si sale de este asistente en cualquier etapa, debe hacer clic en el enlace de confirmación el el correo electrónico que recibió. Esto lo llevará a la interfaz de administración en la que puede continuar configurando su perfil."
   enterprise_description: "Descripción corta"
   enterprise_description_placeholder: "Una oración corta que describa su empresa"
@@ -1037,15 +1037,15 @@ es:
   registration_promo_image: "Imagen en formato apaisado para su perfil"
   registration_about_us: "Texto 'Acerca de nosotras'"
   registration_outcome_headline: "¿Qué recibo?"
-  registration_outcome1_html: "Su perfil le ayuda a las personas a <strong>encontrarle</strong> y <strong>contactarle</strong> en la Open Food Network."
+  registration_outcome1_html: "Su perfil le ayuda a las personas a <strong>encontrarle</strong> y <strong>contactarle</strong> en la Farm Fresh Web."
   registration_outcome2: "Use este espacio para contar la historia de su empresa, para ayudar a dirigir conexiones a su presencia social y en línea."
-  registration_outcome3: "También es un primer paso para negociar en la Open Food Network, o abrir una tienda en línea."
+  registration_outcome3: "También es un primer paso para negociar en la Farm Fresh Web, o abrir una tienda en línea."
   registration_finished_headline: "¡Terminado!"
   registration_finished_thanks: "Gracias por llenar los detalles de %{enterprise}."
-  registration_finished_login: "Puede cambiar o actualizar su negocio en cualquier etapa iniciando sesión en Open Food Network y yendo a Admin."
+  registration_finished_login: "Puede cambiar o actualizar su negocio en cualquier etapa iniciando sesión en Farm Fresh Web y yendo a Admin."
   registration_finished_activate: "Activar %{enterprise}."
-  registration_finished_activate_instruction_html: "Hemos enviado un correo de confirmación a <strong>%{email}</strong> si no ha sido activado antes.<br/> Siga las instrucciones ahí para hacer su empresa visible en Open Food Network."
-  registration_finished_action: "Página de inicio de Open Food Network"
+  registration_finished_activate_instruction_html: "Hemos enviado un correo de confirmación a <strong>%{email}</strong> si no ha sido activado antes.<br/> Siga las instrucciones ahí para hacer su empresa visible en Farm Fresh Web."
+  registration_finished_action: "Página de inicio de Farm Fresh Web"
   registration_type_headline: "¡Último paso para agregar %{enterprise}!"
   registration_type_question: "¿Eres una productora?"
   registration_type_producer: "Sí, soy una productora"
@@ -1193,7 +1193,7 @@ es:
   change_package: "Cambiar paquete"
   spree_admin_single_enterprise_hint: "Sugerencia: Para permitir que la gente te encuentre, activa tu visibilidad"
   your_profil_live: "Tu perfil en directo"
-  on_ofn_map: "en el mapa Open Food Network"
+  on_ofn_map: "en el mapa Farm Fresh Web"
   see: "Ver"
   live: "En directo"
   manage: "Gestionar"
@@ -1336,13 +1336,13 @@ es:
               Network. Tu organización será visible en el mapa y se podrá buscar en
               los listados.
           hub_profile_text2: >
-              Tener un perfil y hacer vínculos a través de Open Food Network será
+              Tener un perfil y hacer vínculos a través de Farm Fresh Web será
               gratis para siempre.
           hub_shop: Tienda
           hub_shop_text1: >
               Tu organización es la columna vertebral de un sistema de consumo local.
               Agrega productos de otras organizaciones y véndelo a través de tu tienda
-              en Open Food Network.
+              en Farm Fresh Web.
           hub_shop_text2: >
               Los grupos pueden tener diferentes finalidades, ya sea una cooperativa
               de alimentos, un grupo de consumo, un supermercado local, ...
@@ -1366,14 +1366,14 @@ es:
 
           profile_only_text2: >
               Si prefieres concentrarte en producir alimentos y deseas dejar el trabajo
-              de venderlo a otras personas, no necesitas una tienda en Open Food Network.
+              de venderlo a otras personas, no necesitas una tienda en Farm Fresh Web.
           profile_only_text3: >
-              Añade tus productos a Open Food Network, permitiendo a los Grupos de
+              Añade tus productos a Farm Fresh Web, permitiendo a los Grupos de
               Consumo vender tus productos.
           producer_shop: Tienda Productora
           producer_shop_text1: >
               Vende tus productos directamente a los consumidores con tu tienda en
-              Open Food Network.
+              Farm Fresh Web.
           producer_shop_text2: >
               Una tienda de productora es para tu producto solamente, si quieres vender
               productos de otros productores, selecciona 'Grupo de Consumo'.
@@ -1381,12 +1381,12 @@ es:
           producer_hub_text1: >
               Tu organización es la columna vertebral de un sistema de consumo local.
               Agrega productos tuyos o de otras organizaciones y véndelo a través
-              de tu tienda en Open Food Network.
+              de tu tienda en Farm Fresh Web.
           producer_hub_text2: >
               Los grupos pueden tener diferentes finalidades, ya sea una cooperativa
               de alimentos, un grupo de consumo, un supermercado local, ...
           producer_hub_text3: >
-              Open Food Network tiene como objetivo apoyar tantos modelos de organizaciones
+              Farm Fresh Web tiene como objetivo apoyar tantos modelos de organizaciones
               como sea posible, queremos aportarte las herramientas que necesites
               para poner en marcha tu organización.
           get_listing: Obtener un listado
@@ -1402,12 +1402,12 @@ es:
           producer_text2: >
               Las Productoras pueden también realizar otras acciones, como agregar
               productos de otras organizaciones y venderlos a través de su tienda
-              en Open Food Network.
+              en Farm Fresh Web.
           non_producer: No-productora
           non_producer_text1: >
               Las no-productoras no producen alimentos por si mismas, lo que significa
               que no pueden crear sus propios productos para ofrecerlos a través de
-              Open Food Network.
+              Farm Fresh Web.
           non_producer_text2: >
               En cambio, las no-productoras se especializan en vincular a las productoras
               con los consumidores finales, ya sea entregando, empaquetando, vendiendo
