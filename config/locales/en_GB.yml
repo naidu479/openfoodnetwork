@@ -691,7 +691,7 @@ en_GB:
   enterprise_final_step: "Final step!"
   enterprise_social_text: "How can people find %{enterprise} online?"
   website: "Website"
-  website_placeholder: "eg. openfoodnetwork.org.au"
+  website_placeholder: "eg. farmfreshweb.com"
   facebook: "Facebook"
   facebook_placeholder: "eg. www.facebook.com/PageNameHere"
   linkedin: "LinkedIn"

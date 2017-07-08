@@ -731,7 +731,7 @@ sv:
   enterprise_final_step: "Sista steget!"
   enterprise_social_text: "Hur kan folk hitta %{enterprise} på nätet?"
   website: "Hemsida"
-  website_placeholder: "ex openfoodnetwork.se"
+  website_placeholder: "ex farmfreshweb.com"
   facebook: "Facebook"
   facebook_placeholder: "eg. www.facebook.com/PageNameHere"
   linkedin: "Linkedin"

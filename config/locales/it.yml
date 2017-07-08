@@ -723,7 +723,7 @@ it:
   enterprise_final_step: "Ultimo passo!"
   enterprise_social_text: "Come possono le persone trovare on-line %{enterprise}?"
   website: "Sito internet"
-  website_placeholder: "p.es. openfoodnetwork.org.au"
+  website_placeholder: "p.es. farmfreshweb.com"
   facebook: "Facebook"
   facebook_placeholder: "p.es. www.facebook.com/PageNameHere"
   linkedin: "LinkedIn"

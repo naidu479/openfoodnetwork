@@ -1015,7 +1015,7 @@ nb:
   enterprise_final_step: "Siste steg!"
   enterprise_social_text: "Hvordan kan folk finne %{enterprise} på nettet?"
   website: "Hjemmeside"
-  website_placeholder: "f.eks. openfoodnetwork.no"
+  website_placeholder: "f.eks. farmfreshweb.com"
   facebook: "Facebook"
   facebook_placeholder: "f.eks. www.facebook.com/FirmaNavnHer"
   linkedin: "LinkedIn"
