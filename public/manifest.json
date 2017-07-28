@@ -1,6 +1,6 @@
 {
-  "name": "farmfreshweb.com",
-  "short_name": "FFW",
+  "name": "pineappleIOT.com",
+  "short_name": "pineappleIOT.com",
   "start_url": "/",
   "display": "standalone",
   "gcm_sender_id": "482941778795",
