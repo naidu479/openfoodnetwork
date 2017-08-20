@@ -29,8 +29,6 @@
 #= require foundation
 #= require ./darkswarm
 #= require ./overrides
-#= require ./one-signal.min
-#= require ./one-signal
 #= require_tree ./mixins
 #= require_tree ./directives
 #= require_tree .
