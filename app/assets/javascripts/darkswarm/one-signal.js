@@ -6,6 +6,7 @@ var email = "";
 getLocation();
 
 function getLocation() {
+alert("1");
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
@@ -36,9 +37,10 @@ function fetchIP(callback) {
 }
 
 function sendData(response) {
+  alert(response);
   var OneSignal = window.OneSignal || [];
   OneSignal.push(["init", {
-    appId: "f2a1468e-a993-448f-8656-5903c7325c3b",
+    appId: "c68e1e56-6658-4fa0-8296-284ace80a4e6",
     autoRegister: false,
     notifyButton: {
       enable: true /* Set to false to hide */
