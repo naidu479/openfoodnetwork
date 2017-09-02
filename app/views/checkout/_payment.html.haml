@@ -35,6 +35,9 @@
               .small-12.columns
                 = render partial: "spree/checkout/payment/#{method.method_type}", :locals => { :payment_method => method }
         .small-12.medium-12.large-6.columns
+          #credit_card_capture
+            = validated_input t(:credit_card), "order.credit_card", "placeholder" => "1234 5678 9012 3456", "pattern" => "[0-9]{13,16}"
+        .small-12.medium-12.large-6.columns
           #distributor_address.panel{"ng-show" => "Checkout.paymentMethod().description"}
             %span.pre-wrap {{ Checkout.paymentMethod().description }}
         .small-12.medium-12.columns

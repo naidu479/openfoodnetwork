@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20161215230219) do
+ActiveRecord::Schema.define(:version => 20170902181336) do
 
   create_table "account_invoices", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -590,6 +590,7 @@ ActiveRecord::Schema.define(:version => 20161215230219) do
     t.string   "last_ip_address"
     t.integer  "cart_id"
     t.integer  "customer_id"
+    t.string   "credit_card"
   end
 
   add_index "spree_orders", ["customer_id"], :name => "index_spree_orders_on_customer_id"

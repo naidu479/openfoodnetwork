@@ -17,6 +17,7 @@ class CheckoutController < Spree::CheckoutController
   end
 
   def update
+    @order.credit_card = object_params[:credit_card]
     if @order.update_attributes(object_params)
       check_order_for_phantom_fees
       fire_event('spree.checkout.update')

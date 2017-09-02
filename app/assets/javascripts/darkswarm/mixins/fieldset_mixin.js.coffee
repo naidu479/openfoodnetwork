@@ -35,6 +35,7 @@ window.FieldsetMixin = ($scope)->
           when "required" then t('error_required')
           when "number"   then t('error_number')
           when "email"    then t('error_email')
+          when "pattern"  then "Wrong card details"
 
     #server_errors = $scope.Order.errors[path.replace('order.', '')]
     #errors.push server_errors if server_errors?
