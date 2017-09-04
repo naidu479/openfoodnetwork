@@ -78,9 +78,6 @@ function msg (options) {
     }
     var image = "";
     switch (options.type) {
-        case "alert":
-            image = "alert.png";
-            break;
         case "info":
             image = "info.png";
             break;
@@ -90,8 +87,6 @@ function msg (options) {
         case "confirm":
             image = "confirm.png";
             break;
-        default:
-            image = "alert.png";
     }
 
     var divId = "msgBox" + new Date().getTime();
@@ -187,7 +182,6 @@ function msg (options) {
             return;
         }
         divMsgBox.css({ opacity: 0, top: top - 50, left: left });
-        divMsgBox.css("background-image", "url('"+msgBoxImagePath+"msgBoxBackGround.png')");
         divMsgBoxBackGround.css({ opacity: options.opacity });
         options.beforeShow();
         divMsgBoxBackGround.css({ "width": $(document).width(), "height": getDocHeight() });

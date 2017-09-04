@@ -28,6 +28,7 @@ div.msgBox {
   -moz-box-shadow: 0 0 11px #000000;
   -webkit-box-shadow: 0 0 11px #000000;
   box-shadow: 0 0 11px #000000;
+  background: #ffffff !important;
 }
 
 div.msgBoxBackGround {
@@ -51,6 +52,7 @@ div.msgBoxTitle {
   color: #00335e;
   width: 100%;
   border-bottom: 1px solid #002c5f;
+  text-align: center;
 }
 
 div.msgBoxImage {
