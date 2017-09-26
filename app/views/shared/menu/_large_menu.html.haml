@@ -1,12 +1,8 @@
 %nav.top-bar.show-for-large-up{'data-topbar' => true}
   %section.top-bar-section
-    %ul.left
-      %li.ofn-logo
-        %a{href: root_path}
-          Home
-    %h1.center{"style" => "display: inline"}
+    %h1.left{"style" => "display: inline; margin-left: -40px;"}
       %a{href: root_path}
-        FarmFreshWeb.com
+        %img{"src" => "/ofn-logo.png", "width" => 350}
     %ul.right
       - if spree_current_user.nil?
         = render 'shared/signed_out'
