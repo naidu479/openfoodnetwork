@@ -42,6 +42,7 @@ class Enterprise < ActiveRecord::Base
   has_many :billable_periods
   has_many :inventory_items
   has_many :tag_rules
+  has_many :farmers_market_subscribers
 
   delegate :latitude, :longitude, :city, :state_name, :to => :address
 

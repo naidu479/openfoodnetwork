@@ -25,6 +25,7 @@ Openfoodnetwork::Application.routes.draw do
   get "/learn", to: redirect("https://openfoodnetwork.org/#{ENV['DEFAULT_COUNTRY_CODE'].andand.downcase}/learn/")
 
   resource :shop, controller: "shop" do
+    get "subscribe/:enterprise_id", action: :subscribe
     get :products
     post :order_cycle
     get :order_cycle

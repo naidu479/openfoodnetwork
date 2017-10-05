@@ -9,6 +9,15 @@ class ShopController < BaseController
     redirect_to main_app.enterprise_shop_path(current_distributor)
   end
 
+  def subscribe
+    email = params[:email] || spree_current_user.email
+    subscriber = FarmersMarketSubscriber.where(email: email, enterprise_id: params[:enterprise_id]).try(:first)
+    if subscriber.nil?
+      subscriber = FarmersMarketSubscriber.create(email: email, enterprise_id: params[:enterprise_id])
+    end
+    render json: { subscribed: subscriber.present? }
+  end
+
   def products
     begin
       renderer = OpenFoodNetwork::CachedProductsRenderer.new(current_distributor, current_order_cycle)

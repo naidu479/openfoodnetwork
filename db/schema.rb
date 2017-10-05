@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170902181336) do
+ActiveRecord::Schema.define(:version => 20171004141536) do
 
   create_table "account_invoices", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -298,6 +298,15 @@ ActiveRecord::Schema.define(:version => 20170902181336) do
   add_index "exchanges", ["payment_enterprise_id"], :name => "index_exchanges_on_payment_enterprise_id"
   add_index "exchanges", ["receiver_id"], :name => "index_exchanges_on_receiver_id"
   add_index "exchanges", ["sender_id"], :name => "index_exchanges_on_sender_id"
+
+  create_table "farmers_market_subscribers", :force => true do |t|
+    t.string   "email"
+    t.integer  "enterprise_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "farmers_market_subscribers", ["enterprise_id"], :name => "index_farmers_market_subscribers_on_enterprise_id"
 
   create_table "inventory_items", :force => true do |t|
     t.integer  "enterprise_id",                   :null => false
