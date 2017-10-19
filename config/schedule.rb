@@ -2,7 +2,7 @@ require 'whenever'
 
 # Learn more: http://github.com/javan/whenever
 
-env "MAILTO", "rohan@rohanmitchell.com"
+env "MAILTO", "ravi.upwork@gmail.com"
 
 
 # If we use -e with a file containing specs, rspec interprets it and filters out our examples
@@ -37,4 +37,9 @@ end
 # On the 2nd of every month at 1:30am
 every '30 1 2 * *' do
   rake 'openfoodnetwork:billing:finalize_account_invoices'
+end
+
+# Every monday
+every '0 1 * * MON' do
+  rake 'subscribe:weekly'
 end

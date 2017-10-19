@@ -1,0 +1,8 @@
+<% @enterprise_products.each do |ep| %>
+  <h3><%= link_to ep[:enterprise].name, enterprise_shop_url(ep[:enterprise]) %></h3>
+  <ul>
+    <% ep[:products].each do |prod| %>
+      <li><%= prod.name %></li>
+    <% end %>
+  </ul>
+<% end %>
