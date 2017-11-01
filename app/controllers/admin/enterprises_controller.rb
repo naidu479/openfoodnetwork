@@ -113,6 +113,11 @@ module Admin
       end
     end
 
+    def send_email
+      NewProductsEmail.run
+      redirect_to '/admin'
+    end
+
     protected
 
     def build_resource_with_address

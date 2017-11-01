@@ -70,6 +70,7 @@ Openfoodnetwork::Application.routes.draw do
   devise_for :enterprise, controllers: { confirmations: 'enterprise_confirmations' }
 
   namespace :admin do
+    get '/send_email', to: 'enterprises#send_email'
     resources :order_cycles do
       post :bulk_update, on: :collection, as: :bulk_update
 
