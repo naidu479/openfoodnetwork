@@ -259,6 +259,19 @@ Spree::Order.class_eval do
     end
   end
 
+  # Group line item by enterprise/farmer
+  def group_by_supplier
+    ordered = {}
+    unordered = self.line_items.group_by{ |c| c.variant.product.supplier.name }
+    unordered.keys.sort.each do |key|
+      ordered[key] = unordered[key]
+    end
+    ordered
+  end 
+
+  def emails_to_notify
+    self.line_items.collect{ |c| c.variant.product.supplier.email }.join(',')
+  end
 
   private
 

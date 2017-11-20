@@ -20,13 +20,16 @@ Spree::OrderMailer.class_eval do
          :reply_to => @order.distributor.email)
   end
 
-  def confirm_email_for_shop(order, resend = false)
+  def confirm_email_for_shop(order, enterprise = nil ,resend = false)
     find_order(order) # Finds an order instance from an id
     subject = (resend ? "[#{t(:resend).upcase}] " : '')
     subject += "#{Spree::Config[:site_name]} #{t('order_mailer.confirm_email.subject')} ##{@order.number}"
-    mail(:to => @order.distributor.email,
-         :from => from_address,
-         :subject => subject)
+    @items = @order.group_by_supplier[enterprise]
+    @total = @items.map{|item| item.price.to_f}.sum
+    @enterprise = Enterprise.find_by_name(enterprise)
+    mail(:to => @enterprise.email,
+       :from => from_address,
+       :subject => subject)
   end
 
   def invoice_email(order, pdf)
