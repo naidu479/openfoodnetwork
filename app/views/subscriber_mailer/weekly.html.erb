@@ -2,8 +2,8 @@
   <% next if ep.nil? %>
   <h3><%= link_to ep[:enterprise].name, enterprise_shop_url(ep[:enterprise]) %></h3>
   <ul>
-    <% ep[:products].map(&:name).uniq.each do |prod| %>
-      <li><%= prod %></li>
+    <% ep[:products].each do |prod| %>
+      <li><%= prod.name %></li>
     <% end %>
   </ul>
 <% end %>
