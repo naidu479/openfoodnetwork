@@ -1,4 +1,5 @@
 <% @enterprise_products.each do |ep| %>
+  <% next if ep.nil? %>
   <h3><%= link_to ep[:enterprise].name, enterprise_shop_url(ep[:enterprise]) %></h3>
   <ul>
     <% ep[:products].each do |prod| %>

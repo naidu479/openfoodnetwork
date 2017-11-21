@@ -10,7 +10,7 @@ class NewProductsEmail
 
     current_enterprises.each do |enterprise|
       products = enterprise.active_products_in_order_cycles
-        .where('spree_products.id IN (?)', current_products.map(&:id).join(','))
+        .where('spree_products.id IN (?)', current_products.map(&:id))
       enterprise_products << { enterprise: enterprise, products: products } if products.any?
     end
 
