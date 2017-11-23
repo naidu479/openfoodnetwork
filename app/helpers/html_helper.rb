@@ -18,4 +18,12 @@ module HtmlHelper
   def strip_surrounding_whitespace(html)
     html.andand.strip
   end
+
+  def supplied_products_quantity(items)
+    items.map(&:quantity).sum
+  end
+
+  def get_customer_name(customer)
+    Customer.find_by_email(customer).try(:name)
+  end
 end

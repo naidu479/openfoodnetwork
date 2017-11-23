@@ -366,6 +366,10 @@ class Enterprise < ActiveRecord::Base
     abn.present?
   end
 
+  def order_group_customer(order_cycle)
+    self.customers.order('name').map{ |customer| customer.orders.where(created_at: (order_cycle.orders_open_at)..(order_cycle.orders_close_at)).group_by{|order| customer.email} }
+  end
+
   protected
 
   def devise_mailer

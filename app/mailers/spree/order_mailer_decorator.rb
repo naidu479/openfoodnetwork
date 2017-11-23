@@ -42,6 +42,26 @@ Spree::OrderMailer.class_eval do
          :reply_to => @order.distributor.email)
   end
 
+  def farmer_report(enterprise, order_cycle)
+    @enterprise = enterprise
+    @line_items = Spree::LineItem.supplied_by(@enterprise).select{|item| item if item.order.customer.present?}
+    @products = @line_items.group_by{|item| item.variant_id}
+    @order_by_customers = @enterprise.order_group_customer(order_cycle)
+    subject = "#{t('email_pickup_reminder_subject', enterprise: order_cycle.coordinator.name, pickup: Time.zone.now + 1.days )}"
+    mail(:to => @enterprise.email,
+       :from => from_address,
+       :subject => subject)
+  end
+
+  def customer_report(order, order_cycle)
+    find_order(order) # Finds an order instance from an id
+    subject = "#{t('email_pickup_reminder_subject', enterprise: order_cycle.coordinator.name, pickup: order_cycle.pickup_time_for(order.distributor))}"
+    mail(:to => @order.email,
+         :from => from_address,
+         :subject => subject,
+         :reply_to => @order.distributor.email)
+  end
+
   def find_order(order)
     @order = order.respond_to?(:id) ? order : Spree::Order.find(order)
   end
