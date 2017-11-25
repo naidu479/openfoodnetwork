@@ -69,7 +69,7 @@ namespace :openfoodnetwork do
       end
 
       # -- Enterprise users
-      unless Spree::User.count > 1 
+      unless Spree::User.count > 1
         puts "[#{task_name}] Seeding enterprise users"
 
         pw = "spree123"

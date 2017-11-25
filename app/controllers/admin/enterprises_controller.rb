@@ -113,8 +113,13 @@ module Admin
       end
     end
 
-    def send_email
+    def send_subscription_email
       NewProductsEmail.run
+      redirect_to '/admin'
+    end
+
+    def send_pickup_email
+      OrderCycleService.run
       redirect_to '/admin'
     end
 

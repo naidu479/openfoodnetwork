@@ -1,5 +1,6 @@
 - content_for :page_actions do
-  = button_link_to 'Send email', '/admin/send_email', icon: 'icon-email'
+  = button_link_to 'Send pickup reminder', '/admin/send_pickup_email', icon: 'icon-email'
+  = button_link_to 'Send subscription email', '/admin/send_subscription_email', icon: 'icon-email'
   = render 'admin/shared/user_guide_link'
 
 

@@ -787,6 +787,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   email_confirm_customer_greeting: "Hi %{name},"
   email_confirm_customer_intro_html: "Thanks for shopping at <strong>%{distributor}</strong>!"
   email_confirm_customer_number_html: "Order confirmation <strong>#%{number}</strong>"
+  email_confirm_pickup_reminder_html: "Pick up reminder <strong>#%{number}</strong>"
   email_confirm_customer_details_html: "Here are your order details from <strong>%{distributor}</strong>:"
   email_confirm_customer_signoff: "Kind regards,"
   email_confirm_shop_greeting: "Hi %{name},"
@@ -808,6 +809,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   email_shipping_collection_time: "Ready for collection:"
   email_shipping_collection_instructions: "Collection instructions:"
   email_special_instructions: "Your notes:"
+  email_pickup_reminder_subject: "Pick up reminder of your order at %{enterprise} for %{pickup}"
 
   email_signup_greeting: Hello!
   email_signup_welcome: "Welcome to %{sitename}!"
