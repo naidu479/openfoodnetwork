@@ -13,7 +13,10 @@
       = render partial: "shopping_shared/order_cycles"
   %div{ 'class' => 'collect_email_popup ng-hide', 'ng-hide' => "hideEmailPopup" }
     %form{ 'class' => 'email_popupbox', 'ng-submit' => 'emailSubmit()' }
-      %h4.text-center{'style'=>'padding: 5px; border-bottom: 1px solid #EEE;'} Subscribe to Farmers Market
+      %h4.text-center{'style'=>'padding: 5px; border-bottom: 1px solid #EEE;'} 
+        Subscribe to Farmers Market
+        %a{'class'=> 'subscribe_close_btn', 'ng-click'=>"closeSubscrbe()"}
+          %i.ofn-i_009-close
       %input{'type' => 'email', 'ng-model' => 'email', 'pattern' => '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$', 'placeholder' => 'Enter email address', 'required' => true, 'style' => 'width: 300px; margin: 30px auto;'}
       %div.text-center
         %button.text-center.tiny Subscribe

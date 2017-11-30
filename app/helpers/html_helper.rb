@@ -26,4 +26,8 @@ module HtmlHelper
   def get_customer_name(customer)
     Customer.find_by_email(customer).try(:name)
   end
+
+  def get_display_amount(item)
+    item.display_amount_with_adjustments.money.to_f
+  end
 end

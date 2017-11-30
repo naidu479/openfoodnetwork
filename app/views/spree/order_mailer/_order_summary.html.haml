@@ -14,7 +14,7 @@
     - @order.group_by_supplier.keys.each do |supplier|
       %tr
         %td
-          = supplier
+          %h5.inline-header= supplier
       - @order.group_by_supplier[supplier].each do |item|
         %tr
           %td

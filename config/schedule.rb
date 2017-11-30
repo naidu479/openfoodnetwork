@@ -43,3 +43,8 @@ end
 every '0 1 * * MON' do
   rake 'subscribe:weekly'
 end
+
+# Every 24 hours
+every 24.hours do
+  runner "OrderCycleService.run"
+end

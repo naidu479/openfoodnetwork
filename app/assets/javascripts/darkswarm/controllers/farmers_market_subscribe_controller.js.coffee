@@ -1,5 +1,5 @@
 Darkswarm.controller "FarmersMarketSubscribeCtrl", ($scope, $http) ->
-  $scope.subscribe_text = 'Subscribe'
+  $scope.subscribe_text = 'Subscribe to our Newsletter'
   $scope.hideEmailPopup = true
   $scope.enterprise_id = null
   $scope.subscribe = (enterprise_id, loggedin) ->
@@ -23,3 +23,6 @@ Darkswarm.controller "FarmersMarketSubscribeCtrl", ($scope, $http) ->
       $scope.hideEmailPopup = true
     .error (data) ->
       alert 'Something went wrong...'
+
+  $scope.closeSubscrbe = () ->
+    $scope.hideEmailPopup = true

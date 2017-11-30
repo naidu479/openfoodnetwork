@@ -69,7 +69,8 @@
     - @order_by_customers.each do |group|
       - if group.present?
         %tr
-          %td= get_customer_name(group.keys.first)
+          %td
+            %h5.inline-header= get_customer_name(group.keys.first)
         - group[group.keys.first].each do |order|
           - order.line_items.each do |item|
             - if @line_items.map(&:variant_id).include?(item.variant_id)

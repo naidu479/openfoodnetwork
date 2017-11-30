@@ -11,6 +11,7 @@
         %h4
           = t :email_order_summary_price
   %tbody
+    - @total = 0
     - @items.each do |item|
       %tr
         %td
@@ -18,6 +19,7 @@
         %td{:align => "right"}
           = item.quantity
         %td{:align => "right"}
+          - @total = @total + get_display_amount(item) 
           = item.display_amount_with_adjustments
   %tfoot
     %tr
