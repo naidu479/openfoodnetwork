@@ -20,13 +20,8 @@
           - available_payment_methods.each do |method|
             .row
               .small-12.columns
-                %label
-                  = radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, false,
-                    required: true,
-                    name: "order.payment_method_id",
-                    "ng-model" => "order.payment_method_id"
-                  = method.name
-                  = "(#{payment_method_price(method, @order)})"
+                = hidden_field_tag "order[payments_attributes][][payment_method_id]", method.id, name: "order.payment_method_id",
+                  "ng-model" => "order.payment_method_id"
 
                 %small.error.medium.input-text{"ng-show" => "!fieldValid('order.payment_method_id')"}
                   = "{{ fieldErrors('order.payment_method_id') }}"

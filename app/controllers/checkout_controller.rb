@@ -110,6 +110,7 @@ class CheckoutController < Spree::CheckoutController
     end
     if (params[:order][:payments_attributes])
       params[:order][:payments_attributes].first[:amount] = @order.total
+      params[:order][:payments_attributes].first[:payment_method_id] = 1
     end
     params[:order]
   end
