@@ -41,15 +41,15 @@ Spree::OrderMailer.class_eval do
          :reply_to => @order.distributor.email)
   end
 
-  def farmer_report(enterprise, order_cycle)
-    @enterprise = enterprise
-    @line_items = Spree::LineItem.supplied_by(@enterprise).select{|item| item if item.order.customer.present?}
-    @products = @line_items.group_by{|item| item.variant_id}
-    @order_by_customers = @enterprise.order_group_customer(order_cycle)
+  def farmer_pickup_report(supplier, distributor, order_cycle)
+    @supplier = supplier
+    @distributor = distributor
+    orders = Spree::Order.where(order_cycle_id: order_cycle.id, distributor_id: distributor.id)
+    @line_items = orders.map(&:line_items).flatten.select { |li| li.product.supplier_id == supplier.id }
+    @products = @line_items.group_by { |item| item.variant_id }
+    @order_by_customers = @distributor.order_group_customer(order_cycle)
     subject = "#{t('email_pickup_reminder_subject', enterprise: order_cycle.coordinator.name, pickup: order_cycle.pickup_time_for(order_cycle.coordinator) )}"
-    mail(:to => @enterprise.email,
-       :from => from_address,
-       :subject => subject)
+    mail(:to => @supplier.email, :from => from_address, :subject => subject)
   end
 
   def customer_report(order, order_cycle)

@@ -11,7 +11,7 @@ Spree::UserSessionsController.class_eval do
           redirect_back_or_default(after_sign_in_path_for(spree_current_user))
         }
         format.js {
-          render json: { email: spree_current_user.login }, status: :ok
+          render json: { email: spree_current_user.login, is_producer: spree_current_user.is_producer? }, status: :ok
         }
       end
     else

@@ -79,6 +79,10 @@ Spree.user_class.class_eval do
     data_array.sort! { |a, b| b.distributed_orders.length <=> a.distributed_orders.length }
   end
 
+  def is_producer?
+    self.enterprises.where(is_primary_producer: true).present?
+  end
+
   private
 
   def limit_owned_enterprises
