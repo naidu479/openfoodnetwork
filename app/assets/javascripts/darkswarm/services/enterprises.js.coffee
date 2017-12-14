@@ -1,4 +1,4 @@
-Darkswarm.factory 'Enterprises', (enterprises, CurrentHub, Taxons, Dereferencer, visibleFilter, Matcher, Geo, $rootScope) ->
+Darkswarm.factory 'Enterprises', (enterprises, CurrentHub, Taxons, Dereferencer, visibleFilter, Matcher, Geo, $rootScope, $http) ->
   new class Enterprises
     enterprises_by_id: {}
     constructor: ->
@@ -74,3 +74,10 @@ Darkswarm.factory 'Enterprises', (enterprises, CurrentHub, Taxons, Dereferencer,
 
     resetDistance: ->
       enterprise.distance = null for enterprise in @enterprises
+
+    save_search: (query)->
+      if query.length > 1
+        $http.post('/user_searches', {term: query}).success (response, status)=>
+          console.log(response.message)
+        .error (response, status)=>
+          console.log(response.message)

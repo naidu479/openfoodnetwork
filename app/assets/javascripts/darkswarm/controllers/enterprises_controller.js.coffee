@@ -18,6 +18,7 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
     $scope.distanceMatchesShown = false
 
     $timeout ->
+      Enterprises.save_search(query)
       Enterprises.calculateDistance query, $scope.firstNameMatch()
       $rootScope.$broadcast 'enterprisesChanged'
 
@@ -86,6 +87,7 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
   $scope.searchWithUserLocation = ->
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition ((position) ->
+        
         return $scope.getUserLocationAddress(position)
       ), ->
         alert 'Something went wrong'
@@ -99,6 +101,7 @@ Darkswarm.controller "EnterprisesCtrl", ($scope, $rootScope, $timeout, $location
     geocoder.geocode { 'location': latlng }, (results, status) ->
       if status == 'OK'
         if results[1]
+          Enterprises.save_search(results[0].formatted_address)
           $scope.pushAddressToTextBox(results[0].formatted_address)
         else
           alert 'Couldn\'t find your location'

@@ -19,6 +19,8 @@ Openfoodnetwork::Application.routes.draw do
 
   get "/register", to: "registration#index", as: :registration
   get "/register/auth", to: "registration#authenticate", as: :registration_auth
+  
+  get "/unsubscribe", to: "subscriptions#unsubscribe"
 
   # Redirects to global website
   get "/connect", to: redirect("https://openfoodnetwork.org/#{ENV['DEFAULT_COUNTRY_CODE'].andand.downcase}/connect/")
@@ -53,6 +55,7 @@ Openfoodnetwork::Application.routes.draw do
   put '/checkout', :to => 'checkout#update' , :as => :update_checkout
   get '/checkout/paypal_payment/:order_id', to: 'checkout#paypal_payment', as: :paypal_payment
 
+  resources :user_searches
   resources :enterprises do
     collection do
       post :search

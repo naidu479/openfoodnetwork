@@ -9,7 +9,7 @@ Spree::BaseMailer.class_eval do
 
   def from_address
     Spree::MailMethod.current.andand.preferred_mails_from ||
-      'test@example.com'
+      'info@farmfreshweb.com'
   end
 
 

@@ -33,7 +33,7 @@ class ContentConfiguration < Spree::Preferences::FileConfiguration
 
   # Footer
   preference :footer_logo, :file
-  has_attached_file :footer_logo, default_url: "/assets/ofn-logo-footer.png"
+  has_attached_file :footer_logo, default_url: "/assets/farm-fresh-logo.png"
 
   #Other
   preference :footer_facebook_url, :string, default: "https://www.facebook.com/Farmfreshwebcom-417944238561840/"

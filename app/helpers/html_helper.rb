@@ -30,4 +30,8 @@ module HtmlHelper
   def get_display_amount(item)
     item.display_amount_with_adjustments.money.to_f
   end
+
+  def get_product_unit
+    {'weight' => {1.0=> 'oz',16.0=> 'lb', 32000.0=> 't'}, 'volume'=> {1.0=> 'fl oz', 16.0=> 'pt', 128.0=> 'gal'}}
+  end
 end

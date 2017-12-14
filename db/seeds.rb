@@ -21,3 +21,5 @@ unless Spree::State.find_by_name 'New York'
     Spree::State.create!({"name"=>state[0], "abbr"=>state[1], :country=>country}, :without_protection => true)
   end
 end
+
+Rake.invoke['db:load']
