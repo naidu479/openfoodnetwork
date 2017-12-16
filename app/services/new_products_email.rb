@@ -11,13 +11,13 @@ class NewProductsEmail
     current_enterprises.each do |enterprise|
       products = enterprise.active_products_in_order_cycles
         .where('spree_products.id IN (?)', current_products.map(&:id))
-      enterprise_products << { enterprise: enterprise, products: products.uniq } if products.any?
+      enterprise_products << { enterprise: enterprise, products: products.uniq } # if products.any?
     end
 
-    FarmersMarketSubscriber.all.group_by { |fms| fms.email }.each do |email, fmss|
+    FarmersMarketSubscriber.where(unsubscribed: false).group_by { |fms| fms.email }.each do |email, fmss|
       eids = fmss.map(&:enterprise_id)
       eps = enterprise_products.map { |ep| ep if eids.include?(ep[:enterprise].id) }
-      SubscriberMailer.weekly(email, eps).deliver if eps.any?
+      SubscriberMailer.weekly(email, eps, current_order_cycles.first).deliver if eps.any?
     end
   end
 end
