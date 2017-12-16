@@ -110,7 +110,8 @@ class CheckoutController < Spree::CheckoutController
     end
     if (params[:order][:payments_attributes])
       params[:order][:payments_attributes].first[:amount] = @order.total
-      params[:order][:payments_attributes].first[:payment_method_id] = 1
+      pay_method = current_distributor.payment_methods.available(:front_end).all.find { |a| a.type.include?('Check') }
+      params[:order][:payments_attributes].first[:payment_method_id] = pay_method.id
     end
     params[:order]
   end
