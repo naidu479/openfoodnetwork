@@ -18,6 +18,9 @@ class CheckoutController < Spree::CheckoutController
 
   def update
     @order.credit_card = object_params[:credit_card]
+    @order.expiry_month = object_params[:expiry_month]
+    @order.expiry_year = object_params[:expiry_year]
+    @order.cvv = object_params[:cvv]
     if @order.update_attributes(object_params)
       check_order_for_phantom_fees
       fire_event('spree.checkout.update')
@@ -57,6 +60,9 @@ class CheckoutController < Spree::CheckoutController
     else
       update_failed
     end
+  rescue => e
+    flash[:error] = t(:payment_processing_failed)
+    update_failed
   end
 
 

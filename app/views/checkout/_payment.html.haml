@@ -32,6 +32,12 @@
         .small-12.medium-12.large-6.columns
           #credit_card_capture
             = validated_input t(:credit_card), "order.credit_card", "placeholder" => "1234 5678 9012 3456", "pattern" => "[0-9]{13,16}"
+            .row
+              .small-6.medium-6.large-6.columns
+                = validated_select t(:expiry_month), "order.expiry_month", (1..12).to_a, "required" => true
+              .small-6.medium-6.large-6.columns
+                = validated_select t(:expiry_year), "order.expiry_year", (Date.current.year..(Date.current.year + 30)).to_a, "required" => true
+            = validated_input t(:cvv), "order.cvv", "type" => "number", "pattern" => "[0-9]{3}"
         .small-12.medium-12.large-6.columns
           #distributor_address.panel{"ng-show" => "Checkout.paymentMethod().description"}
             %span.pre-wrap {{ Checkout.paymentMethod().description }}
