@@ -13,15 +13,19 @@ Spree::Order.class_eval do
   belongs_to :cart
   belongs_to :customer
 
+  has_many :stripe_payments
+
   validates :customer, presence: true, if: :require_customer?
   validate :products_available_from_new_distribution, :if => lambda { distributor_id_changed? || order_cycle_id_changed? }
   attr_accessible :order_cycle_id, :distributor_id
-  attr_accessor :expiry_year, :expiry_month, :cvv
+  attr_accessor :expiry_year, :expiry_month, :cvv, :stripe_token, :stripe_card, :stripe_charge, :stripe_done
 
   before_validation :shipping_address_from_distributor
   before_validation :associate_customer, unless: :customer_id?
   before_validation :ensure_customer, unless: :customer_is_valid?
-  before_validation :stripe_check
+  # before_validation :stripe_check
+
+  after_save :stripe_chargeit
 
   checkout_flow do
     go_to_state :address
@@ -329,12 +333,26 @@ Spree::Order.class_eval do
     end
   end
 
-  def stripe_check
-    return unless @order.present? && (@order.state == "complete" ||  @order.completed?)
-    card_data = { number: credit_card, exp_month: expiry_month, exp_year: expiry_year, cvc: cvv }
-    token = Stripe::Token.create(card: card_data)
-    Stripe::Customer.create(card: token.id, email: email)
-    token = Stripe::Token.create(card: card_data)
-    Stripe::Charge.create(amount: (total*100).to_i, currency: 'usd', source: token.id, description: number, capture: false)
+  # def stripe_check
+  #   card_data = { number: credit_card, exp_month: expiry_month, exp_year: expiry_year, cvc: cvv }
+  #   return if card_data.values.compact.empty?
+  #   pays = Spree::Order.where(email: email).map(&:stripe_payments).flatten
+  #   pay_exists = pays.compact.find { |pay| pay.card_last == credit_card[-4..-1] }.present? unless pays.compact.empty?
+  #   return if pay_exists.present?
+  #   token = Stripe::Token.create(card: card_data)
+  #   customer = Stripe::Customer.create(card: token.id, email: email)
+  #   sps = StripePayment.where(order_id: id, card_last: credit_card[-4..-1], stripe_customer_id: customer.id).first
+  #   unless sps.present?
+  #     stripe_payments.create(card_last: credit_card[-4..-1], stripe_customer_id: customer.id)
+  #   end
+  # end
+
+  def stripe_chargeit
+    if state == "payment" && !stripe_done
+      card_data = { number: credit_card, exp_month: expiry_month, exp_year: expiry_year, cvc: cvv }
+      token = Stripe::Token.create(card: card_data)
+      Stripe::Charge.create(amount: (total*100).to_i, currency: 'usd', source: token.id, description: number, capture: false)
+      self.stripe_done = true
+    end
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20171212060435) do
+ActiveRecord::Schema.define(:version => 20171219091436) do
 
   create_table "account_invoices", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -979,6 +979,14 @@ ActiveRecord::Schema.define(:version => 20171212060435) do
     t.datetime "updated_at",                     :null => false
   end
 
+  create_table "spree_user_searches", :force => true do |t|
+    t.string   "email"
+    t.string   "term"
+    t.string   "user_ip"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "spree_users", :force => true do |t|
     t.string   "encrypted_password"
     t.string   "password_salt"
@@ -1051,6 +1059,17 @@ ActiveRecord::Schema.define(:version => 20171212060435) do
     t.boolean  "default_tax",        :default => false
     t.integer  "zone_members_count", :default => 0
   end
+
+  create_table "stripe_payments", :force => true do |t|
+    t.integer  "order_id"
+    t.string   "stripe_customer_id"
+    t.integer  "card_last"
+    t.boolean  "status"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "stripe_payments", ["order_id"], :name => "index_stripe_payments_on_order_id"
 
   create_table "suburbs", :force => true do |t|
     t.string  "name"
