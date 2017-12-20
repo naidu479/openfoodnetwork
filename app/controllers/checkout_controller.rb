@@ -61,7 +61,7 @@ class CheckoutController < Spree::CheckoutController
       update_failed
     end
   rescue => e
-    flash[:error] = t(:payment_processing_failed)
+    flash[:error] = e.to_s
     update_failed
   end
 
