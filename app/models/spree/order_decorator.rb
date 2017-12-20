@@ -349,7 +349,6 @@ Spree::Order.class_eval do
 
   def stripe_chargeit
     if state == "payment" && !stripe_done
-      Rails.logger "Payment and adding amount to stripe"
       card_data = { number: credit_card, exp_month: expiry_month, exp_year: expiry_year, cvc: cvv }
       token = Stripe::Token.create(card: card_data)
       Stripe::Charge.create(amount: (total*100).to_i, currency: 'usd', source: token.id, description: number, capture: false)

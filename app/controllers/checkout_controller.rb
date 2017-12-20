@@ -140,7 +140,7 @@ class CheckoutController < Spree::CheckoutController
         render :edit
       end
       format.js do
-        render json: {errors: @order.errors, flash: flash.to_hash}.to_json, status: 400
+        render json: {errors: @order.errors.full_messages, flash: flash.to_hash}.to_json, status: 400
       end
     end
   end
