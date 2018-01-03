@@ -18,17 +18,17 @@ every 1.day, at: '12:05am' do
   run_file "lib/open_food_network/integrity_checker.rb"
 end
 
-every 1.day, at: '2:45am' do
-  rake 'db2fog:clean'
-end
+# every 1.day, at: '2:45am' do
+#   rake 'db2fog:clean'
+# end
 
-every 4.hours do
-  rake 'db2fog:backup'
-end
+# every 4.hours do
+#   rake 'db2fog:backup'
+# end
 
-every 5.minutes do
-  enqueue_job 'HeartbeatJob', priority: 0
-end
+# every 5.minutes do
+#   enqueue_job 'HeartbeatJob', priority: 0
+# end
 
 every 1.day, at: '1:00am' do
   rake 'openfoodnetwork:billing:update_account_invoices'
