@@ -79,7 +79,7 @@ describe "Option Value Namer", ->
         expect(namer.option_value_value_unit()).toEqual [1, 'kg']
 
       it "generates values for all weight scales", ->
-        for units in [[1.0, 'g'], [1000.0, 'kg'], [1000000.0, 'T']]
+        for units in [[1.0, 'g'], [1000.0, 'kg']]
           [scale, unit] = units
           p.variant_unit = 'weight'
           p.variant_unit_scale = scale

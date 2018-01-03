@@ -4,7 +4,6 @@ angular.module("admin.products").factory "VariantUnitManager", ->
       'weight':
         1.0: 'oz'
         16.0: 'lb'
-        32000.0: 't'
       'volume':
         1.0: 'fl oz'
         16.0: 'pt'

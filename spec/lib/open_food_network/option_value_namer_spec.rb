@@ -63,7 +63,7 @@ module OpenFoodNetwork
         p = double(:product, variant_unit: 'weight', variant_unit_scale: 1.0)
         v.stub(:product) { p }
         v.stub(:unit_value) { 100 }
-        
+
 
         expect(subject.send(:option_value_value_unit)).to eq [100, 'g']
       end
@@ -85,7 +85,7 @@ module OpenFoodNetwork
       end
 
       it "generates values for all weight scales" do
-        [[1.0, 'g'], [1000.0, 'kg'], [1000000.0, 'T']].each do |scale, unit|
+        [[1.0, 'g'], [1000.0, 'kg']].each do |scale, unit|
           p = double(:product, variant_unit: 'weight', variant_unit_scale: scale)
           v.stub(:product) { p }
           v.stub(:unit_value) { 100 * scale }

@@ -61,7 +61,7 @@ module OpenFoodNetwork
     end
 
     def scale_for_unit_value
-      units = {'weight' => {1.0 => 'oz', 16.0 => 'lb', 32000.0 => 't'},
+      units = {'weight' => {1.0 => 'oz', 16.0 => 'lb'},
                'volume' => {1 => 'fl oz', 16.0 => 'pt',  128.0 => 'gal'}}
 
       # Find the largest available unit where unit_value comes to >= 1 when expressed in it.

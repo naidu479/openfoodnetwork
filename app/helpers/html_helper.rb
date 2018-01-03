@@ -32,6 +32,6 @@ module HtmlHelper
   end
 
   def get_product_unit
-    {'weight' => {1.0=> 'oz',16.0=> 'lb', 32000.0=> 't'}, 'volume'=> {1.0=> 'fl oz', 16.0=> 'pt', 128.0=> 'gal'}}
+    {'weight' => {1.0=> 'oz',16.0=> 'lb'}, 'volume'=> {1.0=> 'fl oz', 16.0=> 'pt', 128.0=> 'gal'}}
   end
 end
